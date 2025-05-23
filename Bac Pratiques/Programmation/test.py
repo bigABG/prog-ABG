@@ -6,8 +6,8 @@ def integral_rectangle(n ,a ,b):
     x = (a + h) / 2
     fi = 0
     for i in range(n):
-        fi = fi + f(x) * h
-        x = x + h
+        fi += f(x) * h
+        x += h
     return fi
 
 
