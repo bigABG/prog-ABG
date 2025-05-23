@@ -3,13 +3,11 @@ def f(x):
 
 def integral_rectangle(n ,a ,b):
     h = (b - a) / n
-    x = a
+    x = (a + h) / 2
     fi = 0
     for i in range(n):
-        f1 = f(x)
-        x += h
-        f2 = f(x)
-        fi += (f1 + f2) * (h / 2)
+        fi = fi + f(x) * h
+        x = x + h
     return fi
 
 
