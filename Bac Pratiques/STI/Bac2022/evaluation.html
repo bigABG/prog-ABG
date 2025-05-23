@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Évaluation d'un modèle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Évaluation d'un modèle</h2>
+    <form action="evaluation.php" method="POST" onsubmit="return verif2()">
+        Numéro de permis : <input type="text" name="numPermis" id="numPermisEval"><br>
+        Modèle testé :
+        <select name="idModele" id="idModele">
+            <option value="">Sélectionnez un modèle</option>
+            <option value="15">WALLYS IRIS</option>
+            <option value="26">WALLYS 619</option>
+            <option value="38">WALLYS 216</option>
+        </select><br>
+
+        Sécurité (1 à 5) : <input type="number" id="securite" min="1" max="5"><br>
+        Conduite (1 à 5) : <input type="number" id="conduite" min="1" max="5"><br>
+        Confort (1 à 5) : <input type="number" id="confort" min="1" max="5"><br>
+
+        <input type="checkbox" name="robot" id="robot"> Je ne suis pas un robot<br><br>
+
+        <button type="submit">Valider</button>
+        <button type="reset">Annuler</button>
+    </form>
+
+    <script src="controle.js"></script>
+</body>
+</html>

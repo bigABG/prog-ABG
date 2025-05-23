@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Enregistrement d'un testeur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enregistrement d'un testeur</h2>
+    <form action="enregistrement.php" method="POST" onsubmit="return verif1()">
+        Numéro de permis : <input type="text" name="numPermis" id="numPermis"><br>
+        Nom : <input type="text" name="nom" id="nom"><br>
+        Prénom : <input type="text" name="prenom" id="prenom"><br>
+        Genre : 
+        <input type="radio" name="genre" value="M"> Homme
+        <input type="radio" name="genre" value="F"> Femme<br><br>
+        
+        <button type="submit">Ajouter</button>
+        <button type="reset">Annuler</button>
+    </form>
+    
+    <script src="controle.js"></script>
+</body>
+</html>
